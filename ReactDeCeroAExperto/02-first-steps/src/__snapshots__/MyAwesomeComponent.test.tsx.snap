@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeComponent > should match snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+       
+      Gerardo
+       
+    </h1>
+    <h3>
+       
+      Tavera
+       
+    </h3>
+    <p>
+       
+      Elden Ring, Zelda, Doom
+       
+    </p>
+    <p>
+       
+      4
+    </p>
+    <h1>
+      Inactive
+    </h1>
+    <button
+      style="height: 30px; width: 100px;"
+    >
+      Activar
+    </button>
+    <p
+      style="background-color: blue; border-radius: 10px; padding: 10px; margin-top: 30px;"
+    >
+      {"zipCode":"ABC-123","street":"Main Stree 123","country":"Canada"}
+    </p>
+  </div>
+</div>
+`;

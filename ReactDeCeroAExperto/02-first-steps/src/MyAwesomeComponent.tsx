@@ -25,8 +25,8 @@ export function MyAwesomeComponent() {
     }
 
     return (
-        <> 
-            <h1> {firstName} </h1>
+        <div> 
+            <h1 className=""> {firstName} </h1>
             <h3> {lastName} </h3>
 
             <p> {favoriteGames.join(', ')} </p>
@@ -41,6 +41,6 @@ export function MyAwesomeComponent() {
             <p style={ addressStyle }>
                 { JSON.stringify(address) }
             </p>
-        </>
+        </div>
     )
 }
