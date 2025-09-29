@@ -19,14 +19,13 @@ describe ('MyAwesomeComponent', () => {
 
     test('should render first name and last name - screen', () => {
         render (<MyAwesomeComponent />);
-        screen.debug();
+        //screen.debug();
         //console.log(container.innerHTML);
 
         const h1 = screen.getByRole('heading', {
             level: 1,
         })
 
-        console.log(h1.innerHTML)
     }),
     
     test('should match snapshot', () => {

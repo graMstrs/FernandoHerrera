@@ -3,7 +3,9 @@
 exports[`MyAwesomeComponent > should match snapshot 1`] = `
 <div>
   <div>
-    <h1>
+    <h1
+      data-testid="first-name-title"
+    >
        
       Gerardo
        
@@ -13,7 +15,9 @@ exports[`MyAwesomeComponent > should match snapshot 1`] = `
       Tavera
        
     </h3>
-    <p>
+    <p
+      class="mi-clase-favorita"
+    >
        
       Elden Ring, Zelda, Doom
        
