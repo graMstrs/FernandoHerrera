@@ -29,7 +29,9 @@ export function FirstStepsApp() {
 
             {
                 itemsInCart.map( ({productName, quantity }) => (
+                    
                     <ItemCounter key={ productName } item={ productName } quantity={ quantity } />
+                    
                 ))
             }
 
@@ -48,5 +50,5 @@ export function FirstStepsApp() {
             />*/ }
             
         </>
-    )
+    );
 }
