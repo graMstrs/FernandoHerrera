@@ -31,8 +31,6 @@ export const SearchBar = ({ placeholder = "Buscar", onQuery }: SearchBarProps) =
         };
     }, [query, onQuery]);
 
-    let searchHistory: string[] = [];
-
     const handleSearch = () => {
         onQuery(query);
         cleanSearchBar();

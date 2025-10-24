@@ -64,17 +64,9 @@ export interface FixedHeight {
   hash?: string;
 }
 
-export enum Rating {
-  G = "g",
-}
-
-export enum TrendingDatetimeEnum {
-  The00000000000000 = "0000-00-00 00:00:00",
-}
-
-export enum Type {
-  GIF = "gif",
-}
+export type Rating = "G" | "PG";
+export type TrendingDatetimeEnum = "0000-00-00 00:00:00";
+export type Type = "gif";
 
 export interface User {
   avatar_url: string;
