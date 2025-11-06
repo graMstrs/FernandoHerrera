@@ -11,18 +11,26 @@ export const getGifsByQuery = async (query: string): Promise<Gif[]> => {
       );
   */
 
-  // llamada usando axios
-  const response = await giphyApi<GiphyRespone>("/search", {
-    params: {
-      q: query,
-    },
-  });
+  if (query.length === 0) return [];
 
-  return response.data.data.map((gif) => ({
-    id: gif.id,
-    title: gif.title,
-    url: gif.images.original.url,
-    width: Number(gif.images.original.width),
-    height: Number(gif.images.original.height),
-  }));
+  try {
+    // llamada usando axios
+    const response = await giphyApi<GiphyRespone>("/search", {
+      params: {
+        q: query,
+        limit: 10,
+      },
+    });
+
+    return response.data.data.map((gif) => ({
+      id: gif.id,
+      title: gif.title,
+      url: gif.images.original.url,
+      width: Number(gif.images.original.width),
+      height: Number(gif.images.original.height),
+    }));
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
 };
