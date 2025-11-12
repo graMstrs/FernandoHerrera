@@ -14,7 +14,6 @@ const useGifs = () => {
     const gifsCache = useRef<Record<string, Gif[]>>({ });
 
     const handleTermClicked = async (term: string) => {
-
         if ( gifsCache.current[term] ) {
             setGifs(gifsCache.current[term]);
             return;
@@ -22,6 +21,7 @@ const useGifs = () => {
 
         const gifs = await getGifsByQuery(term);
         setGifs(gifs);
+        gifsCache.current[term] = gifs;
     }
 
     const handleSearch = async (query: string) => { 
